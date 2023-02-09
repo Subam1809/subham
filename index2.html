@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card {
+      background-color: rgba(252, 67, 246, 0.549);
+      width: 500px;
+      height: 200px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .question {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 20px;
+    }
+
+    .option {
+      background-color: rgb(176, 220, 191);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .option:hover {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="question">Subham,date pe chalogi?</div>
+    <div class="options">
+      <button class="option" id="yes">Yes😍</button>
+      <button class="option" id="no">No</button>
+    </div>
+  </div>
+  <div class="card" id="next-question" style="display: none;">
+    <div class="question"></div>
+  </div>
+
+  <script>
+    const yesBtn = document.querySelector("#yes");
+    const noBtn = document.querySelector("#no");
+    const nextQuestion = document.querySelector("#next-question");
+
+    yesBtn.addEventListener("click", function() {
+      nextQuestion.style.display = "block";
+    });
+
+    noBtn.addEventListener("click", function() {
+      alert("Chup Chap yes kro tabhi aaege Jane denge");
+    });
+  </script>
+</body>
+</html>
